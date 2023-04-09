@@ -12,6 +12,7 @@
     "dev": "nodemon --experimental-specifier-resolution=node src/index.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "glob": "^9.3.4"
   }
 }
