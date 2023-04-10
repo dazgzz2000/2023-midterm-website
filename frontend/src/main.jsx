@@ -5,6 +5,8 @@ import './index.css'
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import RootLayout, { RootIndex } from "./pages";
 import About from "./pages/about";
+import Users from "./pages/users";
+import CreateUsers from "./pages/createusers";
 import "./index.css";
 const router = createHashRouter([
   {
@@ -19,6 +21,14 @@ const router = createHashRouter([
       {
         path: "/app",
         element: <App />,
+      },
+      {
+        path: "/users",
+        element: <Users />,
+      },
+      {
+        path: "/createusers",
+        element: <CreateUsers />,
       },
     ],
   },
