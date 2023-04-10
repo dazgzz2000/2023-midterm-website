@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dazgzz2000.github.io/2023-midterm-project/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
