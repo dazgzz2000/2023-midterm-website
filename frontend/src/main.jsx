@@ -2,13 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider , createBrowserRouter} from "react-router-dom";
 import RootLayout, { RootIndex } from "./pages";
 import About from "./pages/about";
 import Users from "./pages/users";
 import CreateUsers from "./pages/createusers";
 import "./index.css";
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
