@@ -1,24 +1,34 @@
 import { prisma } from "../../../../adapters";
-// export async function getAllUsers(req, res) {
-//     const allUsers = await prisma.user.findMany();
-//     return res.json(allUsers);
-// }
 export async function getAllUsers(req, res) {
-    return res.json([
-        {
-        id: 1,
-        username: "annie",
-        birthday: "1980-07-19T16:00:00.000Z",
-        },
-        ]);
+    console.log("get all user success!");
+    const allUsers = await prisma.user.findMany();
+    return res.json(allUsers);
 }
+// export async function getAllUsers(req, res) {
+//     return res.json([
+//         {
+//         id: 1,
+//         username: "annie",
+//         birthday: "1980-07-19T16:00:00.000Z",
+//         },
+//         ]);
+// }
 /**
 * @param {import('express').Request} req
 * @param {import('express').Response} res
 */
 export async function createOneUser(req, res) {
-    const user = await prisma.user.create({ data: { name: req.body.name } });
-    return res.status(201).json(user);
+    // console.log(req.httpVersion);
+    // console.log(req.headers);
+    console.log(req.body);
+    console.log(req.body.name);
+    if (req.body) {
+        const user = await prisma.user.create({ data: { name: req.body.name } });
+        return res.status(201).json(user);
+    } else {
+        console.log("NO REQ BODY");
+        return res.status(404).send();
+    }
 }
 
 /**
