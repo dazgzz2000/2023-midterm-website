@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE "User" (
+CREATE TABLE "USer" (
     "id" SERIAL,
     "name" TEXT,
 
