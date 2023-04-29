@@ -5,12 +5,19 @@
 
 */
 -- DropTable
-DROP TABLE "USer";
+Drop Table "User";
 
 -- CreateTable
 CREATE TABLE "User" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
-
+    "image" BYTEA,
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );
+
+CREATE TABLE "Post" (
+  "id" SERIAL NOT NULL,
+  "owner" TEXT,
+  "text" TEXT,
+    CONSTRAINT "Post_pkey" PRIMARY KEY ("id")
+)

@@ -23,7 +23,7 @@ export async function createOneUser(req, res) {
     console.log(req.body);
     console.log(req.body.name);
     if (req.body) {
-        const user = await prisma.user.create({ data: { name: req.body.name } });
+        const user = await prisma.user.create({ data: { name: req.body.name , image: req.body.image} });
         return res.status(201).json(user);
     } else {
         console.log("NO REQ BODY");

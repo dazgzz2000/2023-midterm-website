@@ -7,6 +7,8 @@ import RootLayout, { RootIndex } from "./pages";
 import About from "./pages/about";
 import Users from "./pages/users";
 import CreateUsers from "./pages/createusers";
+import Post from "./pages/personal";
+import Posts from "./pages/posts";
 import "./index.css";
 const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: "/createusers",
         element: <CreateUsers />,
+      },
+      {
+        path: "/post",
+        element: <Post />,
+      },
+      {
+        path: "/posts",
+        element: <Posts />,
       },
     ],
   },
