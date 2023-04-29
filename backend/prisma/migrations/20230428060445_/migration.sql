@@ -6,7 +6,6 @@
 */
 -- DropTable
 Drop Table "User";
-Drop Table "Post";
 
 -- CreateTable
 CREATE TABLE "User" (
