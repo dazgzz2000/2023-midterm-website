@@ -9,6 +9,7 @@ import Users from "./pages/users";
 import CreateUsers from "./pages/createusers";
 import Post from "./pages/personal";
 import Posts from "./pages/posts";
+import DeletePost from "./pages/deletepost";
 import "./index.css";
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/posts",
         element: <Posts />,
+      },
+      {
+        path: "/deletepost",
+        element: <DeletePost />,
       },
     ],
   },

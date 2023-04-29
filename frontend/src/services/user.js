@@ -20,10 +20,21 @@ export const user = {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
-      })
+      });
+      return data;
     },
     async getAllpost() {
       const { data } = await api.get("/posts");
       return data;
+  },
+  async deletepost({id}) {
+    console.log("services in user", id);
+    const {data} = await api.post("/deletes", { id: id }, {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data: { id: id }
+    });
+    return data;
   },
 }; 

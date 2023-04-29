@@ -4,7 +4,7 @@ export default function RootLayout() {
         <div>
             <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/users">Users</Link> | 
             <Link to="/createusers">Create User</Link> | <Link to="/post">Post </Link> 
-            | <Link to="/posts">Posts</Link> | <Link to="/app">App</Link> 
+            | <Link to="/posts">Posts</Link> | <Link to="/deletepost">Delete Post</Link> | <Link to="/app">App</Link> 
             <div>
                 <Outlet />
             </div>
